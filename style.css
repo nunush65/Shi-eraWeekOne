@@ -1,11 +1,11 @@
-
+@import "tailwindcss";
 :root {
     
-    --color-primary: #262f39;
-    --color-secondary: #26282a;
-    --color-unique: #3272fbec;
-    --color-background: #c8ddf0;
-    --color-text: #0c0b0b;
+    --color-primary: #123450;
+    --color-secondary: #2a6f90;
+    --color-unique: #235347;
+    --color-background: #b5dee4;
+    --color-text: #000000;
 
   
     --font-heading: Georgia, serif;
@@ -31,22 +31,20 @@
 
 body {
     margin: 0;
-    font-family: var(--font-body);
+    /* font-family: var(--font-body);
     font-size: var(--fs-body);
     background-color: var(--color-background);
-    color: var(--color-text);
+    color: var(--color-text); */
 }
 
 header {
-    background-color: var(--color-primary);
-    color: var(--color-background);
+    /* background-color: var(--color-primary);
+    color: var(--color-background); */
 
 }
 
 h1 {
-    font-size: var(--fs-h1);
-    font-family: var(--font-heading);
-    text-align: center;
+    font-size:calmp(2rem,5vw,4rem);
 }
 
 h2 {
@@ -88,6 +86,106 @@ span{
 main {
     padding: var(--space-3);
     margin: var(--space-2);
+
+}
+
+section {
+    margin-bottom: var(--space-3);
+
+}
+.index-section{
+    display: flex;
+    justify-content:space-between;
+}
+
+/* img{
+    width: 20rem;
+    border: 2px dotted red; 
+    margin: var(--space-2);
+} */
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    container-type: inline-size;
+}
+
+@container (min-width: 600px) {
+    .projects article{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+}
+
+p{
+    font-size: calmp(1rem,2vw,1.2rem);
+    
+}
+
+
+
+form {
+    background-color: var(--color-background);
+    border: 3px solid var(--color-primary);
+    padding: var(--space-3);
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: var(--space-1);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: var(--space-1);
+    margin-bottom: var(--space-2);
+    border: 1px solid var(--color-secondary);
+    font-family: var(--font-body);
+}
+
+ button {
+    border: none;
+    font-family: var(--font-body);
+    display: flex;
+    justify-self: center;
+    
+} 
+
+
+button:hover {
+    background-color: var(--color-primary);
+}
+
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    height: 3rem;
+    
+}
+
+@media (min-width:768px) {
+    nav{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+     .contact-box{
+        margin: 0 auto;
+        max-width: 600px;
+     }
+    
+}
+@media (min-width:1280px) {
+     .contact-box{
+        max-width: 700px;
+        margin: 0 auto;
+    }
+   
+
+    }    margin: var(--space-2);
 
 }
 
