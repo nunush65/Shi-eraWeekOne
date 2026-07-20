@@ -2,75 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-    <style type="text/tailwindcss">
-        @custom-variant dark (&:where(.dark, .dark *));
-    </style>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-
-<body class="bg-white text-black
- dark:bg-zinc-900 dark:text-white">
-
-<header class="bg-teal-800 text-black
- dark:bg-zinc-900 dark:text-white">
-   
-    <nav class="flex flex-col md:flex-row justify-between items-center p-4">
-        <span>Nunush</span>
-
-        <div>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <button id="theme-toggle" class="bg-gray-500">Toggle theme</button>
-    </nav>
-</header>
-
-<main class="max-w-4xl mx-auto p-8">
-
-     <h1 class="text-4xl md:text-5xl font-bold
-      text-center my-8">
-      🧕🏻Nunush's Personal Site
-     </h1>
-    <!-- <section class="img">
-        <img src="\images\code.jpg" alt="">
-    </section> -->
-
-    <section>
-      
-        <p>Hey there, it's me Nusra Sherefa😊. I am a 3<sup>rd</sup>
-             Software Engineer ing student at Jimma university .</p>
-    </section>
     
+    <title>Tip calculator</title>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-500">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+
+    <h1 class="text-center font-bold text-xl">Tip Calculator</h1>
+
+    <label for="billno" class="block font-medium">Bill Amount</label>
+    <input type="number" id="billno" 
+    class="border border-gray-300 rounded py-2 px-4 focus:outline-none focus:ring-2 focus:ring-gray-500">
+
     <br>
 
-    <!-- <section>
-        <h2>projects</h2> 
-    </section> -->
-</main>
+    <label for="tippercent" class="block font-medium">Tip Percent</label>
+    <input type="number" id="tippercent" 
+    class="border border-gray-300 rounded py-2 px-4 focus:outline-none focus:ring-2 focus:ring-gray-500">
 
+    <p class="p-2">Tip amount: <span id="tipamount">0.00</span></p>
 
-<footer class="text-center p-3" >
-    <p> &copy; 2026 Nunush</p>
-</footer>
-
-
-<script>
-  const root = document.documentElement;
-  const saved = localStorage.getItem("theme");
-  if (saved === "dark") root.classList.add("dark");
- 
-  document.getElementById("theme-toggle").addEventListener("click", () => {
-    root.classList.toggle("dark");
-    localStorage.setItem("theme", root.classList.contains("dark") ? "dark" : "light");
-  });
-</script>
+    <p class="p-2">Total amount: <span id="totalamount">0.00</span></p>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
