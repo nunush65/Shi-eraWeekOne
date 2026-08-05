@@ -4,61 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="style.css">
+    
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <title>Movie Search</title>
+    <title>To-Do lit</title>
 </head>
+<body id="body">
+    
+ <div class="container">
+    <form id="todo-form">
+      <input
+        id="description"
+        type="text"
+        placeholder="Please enter your todo"
+      >
+      <button type="submit">Submit</button>
+    </form>
 
-<body class="min-h-screen bg-[#2E1F1B] text-[#F5F1EE] p-8">
-
-    <div class="max-w-7xl mx-auto">
-
-        <h1 class="text-5xl font-bold text-center tracking-widest mb-10">
-            MOVIE SEARCH
-        </h1>
-
-        <div class="flex flex-col lg:flex-row gap-4 justify-center mb-10">
-
-            <input
-                id="searchInput"
-                type="text"
-                placeholder="Search movies..."
-                class="flex-1 bg-[#5E4B43] border border-[#7A6258] rounded-xl px-5 py-3 outline-none placeholder:text-gray-300 focus:border-[#C7B299]"
-            >
-
-            <select
-                id="genreFilter"
-                class="bg-[#5E4B43] border border-[#7A6258] rounded-xl px-5 py-3 outline-none"
-            >
-                <option value="all">All Genres</option>
-                <option value="Fantasy">Fantasy</option>
-                <option value="Animation">Animation</option>
-                <option value="Drama">Drama</option>
-                <option value="Action">Action</option>
-                <option value="Romance">Romance</option>
-                <option value="Sci-Fi">Sci-Fi</option>
-                <option value="Mystery">Mystery</option>
-                <option value="Comedy">Comedy</option>
-                <option value="Adventure">Adventure</option>
-            </select>
-
-            <button
-                id="topRated"
-                class="bg-[#5E4B43] border border-[#7A6258] rounded-xl px-6 py-3 hover:bg-[#705A51] transition"
-            >
-                Top Rated
-            </button>
-
-        </div>
-
-        <div
-            id="movieContainer"
-            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
-        ></div>
-
-    </div>
+    <ul id="todo-list"></ul>
+  </div>
 
     <script src="script.js"></script>
-
 </body>
 </html>
