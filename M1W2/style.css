@@ -1,0 +1,134 @@
+
+:root {
+    
+    --color-primary: #262f39;
+    --color-secondary: #26282a;
+    --color-unique: #3469dbec;
+    --color-background: #c5c8cb;
+    --color-text: #222222;
+
+  
+    --font-heading: Georgia, serif;
+    --font-body: Arial, sans-serif;
+    --font-nav: Verdana, sans-serif;
+
+  
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 2rem;
+    --space-4: 4rem;
+
+    
+    --fs-body: 1rem;
+    --fs-h3: 1.25rem;
+    --fs-h2: 1.563rem;
+    --fs-h1: 1.953rem;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    text-align: center;
+    padding: var(--space-3);
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    font-family: var(--font-heading);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+    font-family: var(--font-heading);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+    font-family: var(--font-heading);
+}
+
+
+nav {
+    margin-top: var(--space-2);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-background);
+    margin-right: var(--space-2);
+    font-family: var(--font-nav);
+}
+
+nav a:hover {
+    color: var(--color-unique);
+}
+
+main {
+    padding: var(--space-3);
+
+}
+
+section {
+    margin-bottom: var(--space-3);
+    background-color: var;
+}
+
+
+article {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-secondary);
+    padding: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+
+
+form {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-secondary);
+    padding: var(--space-3);
+}
+
+label {
+    display: block;
+    margin-bottom: var(--space-1);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: var(--space-1);
+    margin-bottom: var(--space-2);
+    border: 1px solid var(--color-secondary);
+    font-family: var(--font-body);
+}
+
+button {
+    background-color: var(--color-unique);
+    color: var(--color-background);
+    border: none;
+    padding: var(--space-1) var(--space-2);
+    font-family: var(--font-body);
+}
+
+button:hover {
+    background-color: var(--color-primary);
+}
+
+footer {
+    background-color: var(--color-secondary);
+    color: var(--color-background);
+    text-align: center;
+    padding: var(--space-1);
+}
