@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    
+    <title>Tip calculator</title>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-500">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+
+    <h1 class="text-center font-bold text-xl">Tip Calculator</h1>
+
+    <label for="billno" class="block font-medium">Bill Amount</label>
+    <input type="number" id="billno" 
+    class="border border-gray-300 rounded py-2 px-4 focus:outline-none focus:ring-2 focus:ring-gray-500">
+
+    <br>
+
+    <label for="tippercent" class="block font-medium">Tip Percent</label>
+    <input type="number" id="tippercent" 
+    class="border border-gray-300 rounded py-2 px-4 focus:outline-none focus:ring-2 focus:ring-gray-500">
+
+    <p class="p-2">Tip amount: <span id="tipamount">0.00</span></p>
+
+    <p class="p-2">Total amount: <span id="totalamount">0.00</span></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
